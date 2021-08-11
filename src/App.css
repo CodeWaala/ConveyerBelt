@@ -1,38 +1,113 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  height: 50px;
+  background: #777;
+  align-items: center;
+  font-size: 20px;
+}
+
+.ConveyorBelt-container {
+  display: flex;
+}
+
+.ConveyorBelt {
+  flex: 2;
+  border: 1px solid black;
+  height: 2px;
+  position: relative;
+  background: black;
+  box-shadow: 0px 29px 0 black;
+  margin: 55px 10px;
+}
+
+.ConveyorBelt:before {
+  content: "";
+  width: 70px;
+  height: 42px;
+  border: 3px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -8px;
+  left: -9px;
+}
+.ConveyorBelt:after {
+  content: "";
+  width: 70px;
+  height: 42px;
+  border: 3px solid black;
+  border-radius: 50%;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  border-bottom-color: transparent;
+  position: absolute;
+  top: -8px;
+  right: -9px;
+}
+
+.StationsContainer {
+  flex: 1;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  margin: 10px;
+}
+
+.gear {
+  display: inline-block;
+  border: 5px solid black;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  position: relative;
+  top: 5px;
+  animation: load 3s linear infinite;
+  z-index: 20;
+}
+.gear:before {
+  background: black;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  content: "";
+  top: -6px;
+  left: 10px;
+  box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+  -webkit-transform: rotate(45deg);
+}
+.gear:after {
+  background: black;
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  content: "";
+  top: -9px;
+  left: 2px;
+  box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
+}
+.right {
+  float: right;
+}
+
+.AStation {
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  right: 10px;
+  left: auto;
+  top: 20%;
+  background: #ffb347;
+  box-shadow: 0 15px 10px #777;
+  width: 100%;
+  height: 100px;
+  border: 1px solid #777;
+  margin: 5px;
+  padding: 5px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
+@keyframes load {
+  100% {
     transform: rotate(360deg);
   }
 }
