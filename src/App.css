@@ -56,7 +56,7 @@
   margin: 10px;
 }
 
-.gear {
+.Gear {
   display: inline-block;
   border: 5px solid black;
   border-radius: 50%;
@@ -67,7 +67,7 @@
   animation: load 3s linear infinite;
   z-index: 20;
 }
-.gear:before {
+.Gear:before {
   background: black;
   width: 5px;
   height: 5px;
@@ -78,7 +78,7 @@
   box-shadow: 12px 10px 0 black, 0px 23px 0 black, -11px 10px 0 black;
   -webkit-transform: rotate(45deg);
 }
-.gear:after {
+.Gear:after {
   background: black;
   width: 5px;
   height: 5px;
@@ -90,6 +90,10 @@
 }
 .right {
   float: right;
+}
+
+.Package {
+  transition: left 2s;
 }
 
 .AStation {

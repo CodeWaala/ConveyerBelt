@@ -34,7 +34,7 @@ class App extends React.Component {
             {items.map(({ type, x }, index) => {
               return (
                 <div
-                  className="package"
+                  className="Package"
                   key={`${type}${index}`}
                   style={{ position: "absolute", left: x }}
                 >
@@ -42,8 +42,8 @@ class App extends React.Component {
                 </div>
               );
             })}
-            <div className="gear"></div>
-            <div className="gear right"></div>
+            <div className="Gear"></div>
+            <div className="Gear right"></div>
           </div>
           <div className="StationsContainer">
             {stations.map(({ id, itemCount }) => {
